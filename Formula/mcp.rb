@@ -11,7 +11,7 @@ class Mcp < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.2.0/mcp_0.2.0_darwin_amd64.tar.gz"
-      sha256 "68c150f2aa6d8298dfa8f19d70eb7dcc143ce7765777a42209179c360b94974f"
+      sha256 "b5ae3be11511df867a854e6ee7ebbc1d5d13882c550c0b08b86ec4a1f0b27868"
 
       define_method(:install) do
         bin.install "mcp"
@@ -19,7 +19,7 @@ class Mcp < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.2.0/mcp_0.2.0_darwin_arm64.tar.gz"
-      sha256 "0527827a682b31bdfad58d46c7c446a9a180b7ad2a69e083c6a038b4d02fa777"
+      sha256 "4f741ba598486838c1ace908fbe3c05d61bec4664de217c6030d0033100fc495"
 
       define_method(:install) do
         bin.install "mcp"
@@ -30,14 +30,14 @@ class Mcp < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.2.0/mcp_0.2.0_linux_amd64.tar.gz"
-      sha256 "f61f961e94fa2b1f53efa66e651b6f9470f77ce85a5779d01e94194661651b30"
+      sha256 "33f0cbaf68d204729ea876c13db20c87a696357a84355dfbc03334c5182c9c3b"
       define_method(:install) do
         bin.install "mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.2.0/mcp_0.2.0_linux_arm64.tar.gz"
-      sha256 "40c24aea668346a8edbb7e9cfed165c27ef32fbe33d7c45c3df2bd4ae4290bcf"
+      sha256 "da82b3af56f50f1f01178ad9f8abc7a703a35d533c4cfd3b9a83c7a1798b69ed"
       define_method(:install) do
         bin.install "mcp"
       end
