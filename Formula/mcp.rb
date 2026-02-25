@@ -5,21 +5,21 @@
 class Mcp < Formula
   desc "Run MCP servers without blindly trusting them"
   homepage "https://mcp-hub.info"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.2.0/mcp_0.2.0_darwin_amd64.tar.gz"
-      sha256 "5f1fa54d1e1d4b2e71081146dca59c52d0ab8f3b22510485f5993d5f4419cc2e"
+      url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.2.1/mcp_0.2.1_darwin_amd64.tar.gz"
+      sha256 "583453085f7a17beb30bd4a5c7b5533c1966a8187c7bec914e0cb4b7f02dde3a"
 
       define_method(:install) do
         bin.install "mcp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.2.0/mcp_0.2.0_darwin_arm64.tar.gz"
-      sha256 "89bffa24ba5111b7a35fedfa8b5678cbcc0334def49776dd885279a724e69c24"
+      url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.2.1/mcp_0.2.1_darwin_arm64.tar.gz"
+      sha256 "3683b4c062164e8ea1a8fa60540a805c52bd1ab2eb3acb7b144e040ac2ed07c1"
 
       define_method(:install) do
         bin.install "mcp"
@@ -29,15 +29,15 @@ class Mcp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.2.0/mcp_0.2.0_linux_amd64.tar.gz"
-      sha256 "210a968ff81c3d2731dbbf36b20044c6101874aa7894d71856ed1beabba6608a"
+      url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.2.1/mcp_0.2.1_linux_amd64.tar.gz"
+      sha256 "2e93ab3646bab5f9904830a2162f15850074cdb952309155a8b5b2b5a95b5ee0"
       define_method(:install) do
         bin.install "mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.2.0/mcp_0.2.0_linux_arm64.tar.gz"
-      sha256 "8171355e43aa778d24c4e5f6cfa6f6f1162cf3ec2f470a27b97883687a644d1e"
+      url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.2.1/mcp_0.2.1_linux_arm64.tar.gz"
+      sha256 "683e60e7711e2ba6fc07568597370919e27a5a60c27b0a1a035d6a7dc4307925"
       define_method(:install) do
         bin.install "mcp"
       end
