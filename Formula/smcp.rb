@@ -5,21 +5,21 @@
 class Smcp < Formula
   desc "Run MCP servers without blindly trusting them"
   homepage "https://mcp-hub.info"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.3.0/smcp_0.3.0_darwin_amd64.tar.gz"
-      sha256 "3963ff2aaf7b4361cb9295432ed1c9d47d19605e0019217ffb1c455ad35827a5"
+      url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.3.1/smcp_0.3.1_darwin_amd64.tar.gz"
+      sha256 "5ed2e7939bc098172870fc73ccf036a73479000167bd3c769e3e5e9ffa28c50a"
 
       define_method(:install) do
         bin.install "smcp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.3.0/smcp_0.3.0_darwin_arm64.tar.gz"
-      sha256 "bc5ec68d95e562d1de2523fa76a15dbf3a2d0d58de00b00f44269a42623479ab"
+      url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.3.1/smcp_0.3.1_darwin_arm64.tar.gz"
+      sha256 "07ae1647cd3e13ab832d3ef6027e25825c7d9b28ea7109870278b039ff6924f2"
 
       define_method(:install) do
         bin.install "smcp"
@@ -29,15 +29,15 @@ class Smcp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.3.0/smcp_0.3.0_linux_amd64.tar.gz"
-      sha256 "0868fca49d5c1ba9089206f976d832f2e366806e1f81791ac33516c449db6195"
+      url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.3.1/smcp_0.3.1_linux_amd64.tar.gz"
+      sha256 "e6ad19997fd9c34f1557c38fb83aa47f9a2329a27e409f696a5fed6a68a1c2e8"
       define_method(:install) do
         bin.install "smcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.3.0/smcp_0.3.0_linux_arm64.tar.gz"
-      sha256 "418192c544236b640f6e8a09c5492057eaf144dcb64cbc67c46d007fabcd0a7f"
+      url "https://github.com/mcp-hub-corp/mcp-client/releases/download/v0.3.1/smcp_0.3.1_linux_arm64.tar.gz"
+      sha256 "e12df277874eff308c7d0767c8c82fd7a44894d77f24ee9db01bab2edfc638b0"
       define_method(:install) do
         bin.install "smcp"
       end
